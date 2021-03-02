@@ -3,12 +3,17 @@ module.exports = {
   parserOptions: {
     babelOptions: {
       configFile: './babel.config.json',
-    },
+    }
   },
   env: {
     browser: true,
     node: true,
-    es6: true,
+    es6: true
   },
-  extends: ['google'],
-};
+  extends: ['eslint:recommended', 'google'],
+  rules: {
+    'semi': 'off',
+    'comma-dangle': 'off',
+    'require-jsdoc': 'off'
+  }
+}
